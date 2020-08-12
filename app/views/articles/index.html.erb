@@ -1,5 +1,5 @@
 <h1>Articles listing page</h1>
-
+<button type="submit" name="button"></button>
 
 <table>
   <thead>
@@ -14,10 +14,14 @@
     <tr>
       <td><%= article.title %></td>
       <td><%= article.discription %></td>
-      <td>Placeholder</td>
+      <td><%= link_to 'show`', article_path(article) %></td>
+      <td><%= link_to 'del  udalit`', article_path(article), method: :delete %></td>
 
     </tr>
     <% end %>
 
   </tbody>
+
+
+
 </table>
