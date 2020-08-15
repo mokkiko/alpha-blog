@@ -2,3 +2,10 @@
 <h2></h2>
 <p><h3><strong>Title: </strong><%= @article.title %></h3></p>
 <p><h3><strong>Description: </strong><%= @article.discription %></h3></p>
+
+
+<%= link_to 'Edit ', edit_article_path(@article) %>
+<p></p>
+<%= link_to 'delete', article_path(@article), method: :delete, data: { confirm: "Are you shure?"} %>
+<p></p>
+<%= link_to 'Return to articles listing', articles_path %>
