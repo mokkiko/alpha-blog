@@ -1,0 +1,41 @@
+@import 'bootstrap/dist/css/bootstrap';
+.navbar {
+
+background-color: black !important;
+height: 100px;
+
+}
+
+.nav-link{
+  color: white !important;
+}
+
+
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+
+#home-container {
+  margin-top: 2px;
+
+}
+.jumbotron {
+  background-image: asset-url('B1.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  background-color: lightgrey;
+}
