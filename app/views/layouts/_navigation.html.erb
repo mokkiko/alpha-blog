@@ -11,19 +11,19 @@
 
        </li>
        <li class="nav-item">
-         <a class="nav-link" href="#">Features</a>
+         <%= link_to 'О Кирилле', about_path, class: "nav-link active" %>
        </li>
        <li class="nav-item">
              <%= link_to "Kirill_test", mtest_path, class: "nav-link" %>
        </li>
        <li class="nav-item dropdown">
          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-           Dropdown link
+           Записи
          </a>
          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-           <a class="dropdown-item" href="#">Action</a>
-           <a class="dropdown-item" href="#">Another action</a>
-           <a class="dropdown-item" href="#">Something else here</a>
+          <%= link_to 'Создать статью', new_article_path, class: "dropdown-item" %>
+          <%= link_to 'Список статей', articles_path, class: "dropdown-item" %>
+
          </div>
        </li>
      </ul>

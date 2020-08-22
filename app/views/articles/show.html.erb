@@ -1,11 +1,36 @@
-<h1>!1!  Showing article details</h1>
-<h2></h2>
-<p><h3><strong>Title: </strong><%= @article.title %></h3></p>
-<p><h3><strong>Description: </strong><%= @article.discription %></h3></p>
+<h3 class="text-center mt-3"><%= @article.title %></h3>
 
 
-<%= link_to 'Edit ', edit_article_path(@article) %>
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-8 mt-2">
+        <div class="card text-center shadow-lg p-3 mb-5 bg-white rounded">
+            <div class="card-header font-italic">
+                  Составил Кирилл
+            </div>
+              <div class="card-body">
+                <div class="card-text text-left"><%= simple_format(@article.discription) %></div>
+                <%= link_to "EDIT", edit_article_path(@article), class: "btn btn-outline-info" %>
+                <%= link_to "delete", article_path(@article), class: "btn btn-outline-danger", method: :delete, data: { confirm: "Are you shure?"} %>
+              </div>
+            <div class="card-footer text-muted">
+              <small>Created <%= time_ago_in_words(@article.created_at) %> ago,
+              Edited <%= time_ago_in_words(@article.updated_at) %> ago
+              </small>
+           </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
 <p></p>
-<%= link_to 'delete', article_path(@article), method: :delete, data: { confirm: "Are you shure?"} %>
-<p></p>
-<%= link_to 'Return to articles listing', articles_path %>
+
+
+
+<div class="carousel-item">
+  <img src="..." alt="...">
+  <div class="carousel-caption d-none d-md-block">
+    <h5>...</h5>
+    <p>...</p>
+  </div>
+</div>
