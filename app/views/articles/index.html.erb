@@ -1,35 +1,5 @@
 <h1 class="text-center mt-3">Все Записи Дневника</h1>
-  <div class="container">
-      <% @articles.each do |article| %>
-      <div class="row justify-content-md-center">
-
-        <div class="col-8 mt-2">
-          <div class="card text-center shadow-lg p-3 mb-5 bg-white rounded">
-              <div class="card-header font-italic">
-                    by <%= article.user.username if article.user %>
-              </div>
-                <div class="card-body">
-                  <h5 class="card-title"><%= link_to article.title, article_path(article), class: "text-info" %></h5>
-                  <p class="card-text"><%= truncate(article.discription, length: 20) %></p>
-                  <%= link_to "View", article_path(article), class: "btn btn-outline-success" %>
-                  <%= link_to "EDIT", edit_article_path(article), class: "btn btn-outline-info" %>
-                  <%= link_to "delete", article_path(article), class: "btn btn-outline-danger", method: :delete, data: { confirm: "Are you shure?"} %>
-
-                </div>
-              <div class="card-footer text-muted">
-                <small>Created <%= time_ago_in_words(article.created_at) %> ago,
-                Edited <%= time_ago_in_words(article.updated_at) %> ago
-                </small>
-             </div>
-            </div>
-          </div>
-        </div>
-      <% end %>
-    </div>
-
-
-
-
+<%= render 'article' %>
 
 <p></p>
 <%= link_to 'Create new article', new_article_path %>
