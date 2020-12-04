@@ -28,6 +28,12 @@
           <%= link_to 'Список статей', articles_path, class: "dropdown-item" %>
 
          </div>
+         <li class="nav-item">
+               <%= link_to 'LOGIN', login_path, class: "nav-link" %>
+         </li>
+         <li class="nav-item">
+               <%= link_to 'Loguot', logout_path, class: "nav-link", method: :delete %>
+         </li>
        </li>
      </ul>
    </div>
